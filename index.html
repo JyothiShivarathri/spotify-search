@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#" id="logo1">
+        <img src="logo.jpg" id="logo"width="60" height="60" class="d-inline-block align-top" alt="Spotify Logo">
+        Spotify
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <input class="form-control mr-sm-2" type="text" id="searchInput" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="search()">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <span><i class="artistsearch">Explore selected artists only</i></span> 
+  <br><br>
+  <div class="big-container">
+
+  <div class="sidebar">
+   
+  <div class="container">
+    <h6>Arijit Singh</h6>
+    <img src="https://lastfm.freetls.fastly.net/i/u/ar0/ad7e05685bef8909f27c0d95bf79425c.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>AR Rehman</h6>
+    <img src="https://assets.telegraphindia.com/telegraph/2024/Jan/1704532804_ar-rahman.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>Ilaiyaraaja</h6>
+    <img src="https://1847884116.rsc.cdn77.org/tamil/home/ilayaraja-rajyasabhamp-672022.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>Shreya Goshal</h6>
+    <img src="https://i.scdn.co/image/ab6761610000517436a7262247318ff0f1ad00da" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>Anirudh</h6>
+    <img src="https://pbs.twimg.com/profile_images/1727703655514595328/xmNR2I1p_400x400.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>karthik</h6>
+    <img src="https://blackhattalent.com/wp-content/uploads/2023/09/Karthik.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>S.P.B</h6>
+    <img src="https://static.toiimg.com/thumb/msid-78321075,width-400,resizemode-4/78321075.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>K.S Chithra</h6>
+    <img src="https://yt3.googleusercontent.com/ytc/AIdro_mtbHvw6L1fitXHXLlZ6BecxPL7YHOmbJXvVT-w4A=s900-c-k-c0x00ffffff-no-rj" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>Thaman</h6>
+    <img src="https://images.news18.com/ibnlive/uploads/2022/03/untitled-design-10-10.png" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  <div class="container">
+    <h6>Pritam</h6>
+    <img src="https://rollingstoneindia.com/wp-content/uploads/2022/09/Pritam-1-scaled.jpg" class="img-circle" alt="Cinque Terre" > 
+  </div>
+  </div>
+  
+  <div id="results" class="row">
+   </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+
+
+    function search() {
+      const searchInput = document.getElementById('searchInput').value.toLowerCase();
+      const resultsContainer = document.getElementById('results');
+   
+
+      resultsContainer.innerHTML = '';
+  
+  
+    
+      // Fetch JSON data from server
+      fetch('http://localhost:3000/artists')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+      
+          const filteredArtists = [];
+          const ip = document.getElementById('searchInput');
+    
+          for (const artist of data) {
+            if (
+              artist.ArtistName.toLowerCase().includes(searchInput) ||
+              artist.songName.toLowerCase().includes(searchInput)
+            ) {
+              filteredArtists.push(artist);
+             } // } else {
+            //    for (const album of artist.AlbumsByArtist) {
+            //        if (album.AlbumName.toLowerCase().includes(searchInput)) {
+            //         filteredArtists.push(artist.AlbumsByArtist);
+            //         break;
+            //       }
+            //    }
+            //  }
+          }
+    
+          console.log(filteredArtists);
+    
+          for (const artist of filteredArtists) {
+            const div = document.createElement('div');
+            div.classList.add('col-md-4');
+    
+            const image = document.createElement('img');
+            image.src = artist.imageUrl;
+            image.alt = artist.ArtistName;
+            div.appendChild(image);
+            // const image1 = document.createElement('img');
+            // image1.src = artist.imageUrl;
+            // image1.alt = artist.ArtistName;
+            // div.appendChild(image1);
+            
+          //para1
+            var p1=document.createElement("p")
+        
+            p1.textContent="SongName:Click below songname to listen"
+            p1.setAttribute("id","para")
+            p1.style.color="white";
+            div.appendChild(p1)
+            const songLink = document.createElement('a');
+            songLink.href = artist.songUrl;
+            songLink.target = '_blank';
+            songLink.innerText="SongName";
+            songLink.innerText = artist.songName;
+            songLink.setAttribute("id","songname")
+            div.appendChild(songLink);
+          //para2
+      
+            var p2=document.createElement("p")
+            p2.innerText="ArtistName:Click below to Know More,"
+            p2.setAttribute("id","para1")
+            p2.style.color="white"
+            div.appendChild(p2)
+            const artistLink = document.createElement('a');
+            artistLink.href = artist.ArtistInfo;
+            artistLink.target = '_blank';
+            artistLink.innerText = artist.ArtistName;
+     
+            artistLink.setAttribute("id","ArtistName")
+            div.appendChild(artistLink);
+    
+            resultsContainer.appendChild(div);
+          
+        
+          // for(const album of artist.AlbumsByArtist){
+          //   const div1=document.createElement("div");
+          //   resultsContainer.appendChild(div1);
+          //   var img2=document.createElement("img")
+          //   div1.appendChild(img2)
+          //   img2.src=album.AlbumImage;
+
+          // }
+        
+      }
+    })
+        .catch(error => {
+          console.error('Error fetching data:', error);
+        });
+    }
+    
+    
+  </script>
+</body>
+</html>
+

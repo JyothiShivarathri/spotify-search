@@ -1,0 +1,104 @@
+{
+    "artists":[
+        {
+            "id":1,
+             "ArtistName":"Arijit Singh",
+             "ArtistInfo":"https://www.last.fm/music/Arijit+Singh/+albums",
+             "songName":"Apna Bana Le",
+              "imageUrl":"https://c.saavncdn.com/815/Bhediya-Hindi-2023-20230927155213-500x500.jpg",
+            
+             "songUrl" :"https://open.spotify.com/track/1hA697u7e1jX2XM8sWA6Uy",
+             "Playlist":"https://open.spotify.com/artist/4YRxDV8wJFPHPTeXepOstw"
+
+             
+        },
+        {
+            "id":2,
+            "ArtistName":"AR Rehman",
+            "ArtistInfo":"https://www.last.fm/music/A.R.+Rahman/+albums",
+            "songName":"Kadhal Rojave",
+            "imageUrl":"https://c.saavncdn.com/120/Roja-Telugu-2014-500x500.jpg",
+            "songUrl":"https://open.spotify.com/search/kadhal%20rojave",
+            "Playlist":"https://open.spotify.com/artist/1mYsTxnqsietFxj1OgoGbG"
+        },
+        { 
+            "id":3,
+            "ArtistName":"Ilaiyaraaja",
+            "ArtistInfo":"https://open.spotify.com/artist/1mYsTxnqsietFxj1OgoGbG",
+            "songName":"Sundari Neeve",
+            "imageUrl":"https://i.scdn.co/image/ab67616d0000b27376873613094462d0244ae861",
+            "songUrl":"https://open.spotify.com/track/4uSdLJZ1Qoe1ckC5WGmipG?si=730044371cb24a8b",
+            "Playlist":"https://open.spotify.com/artist/3m49WVMU4zCkaVEKb8kFW7"
+            
+        },
+        {
+            "id":4,
+            "ArtistName":"Shreya Goshal",
+            "ArtistInfo":"https://www.last.fm/music/Shreya+Ghoshal/+albums",
+            "songName":"Tum Kya Mile",
+            "imageUrl":"https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fe/3c/47/fe3c473c-c806-8cd9-db29-62c4e5b84e89/197189723179.jpg/1200x630bb.jpg",
+            "songUrl":"https://open.spotify.com/track/38h4tmH1AWBVuemWAy4R4y",
+            "Playlist":"https://open.spotify.com/artist/0oOet2f43PA68X5RxKobEy"
+        },
+        {
+            "id":5,
+            "ArtistName":"Anirudh Ravi Chander",
+            "ArtistInfo":"https://www.last.fm/music/Anirudh+Ravichander/+albums",
+            "songName":"Chaleya",
+            "imageUrl":"https://c.saavncdn.com/026/Chaleya-From-Jawan-Hindi-2023-20230814014337-500x500.jpg",
+            "songUrl":"https://open.spotify.com/album/7zAITOBN6eG4UBm4IapAik",
+            "Playlist":"https://open.spotify.com/artist/4zCH9qm4R2DADamUHMCa6O"
+        },
+        {
+            "id":6,
+            "ArtistName":"karthik",
+            "ArtistInfo":"https://www.last.fm/music/Karthik/+albums",
+            "songName":"Adigaa",
+            "imageUrl":"https://upload.wikimedia.org/wikipedia/en/0/0a/Hi_Nanna_%28soundtrack%29.jpg",
+            "songUrl":"https://open.spotify.com/track/4k9RLcTWZog34sIXt23Ibr",
+            "Playlist":"https://open.spotify.com/artist/0LSPREIgGMZXCuKVel7LVD"
+
+        },
+        {
+
+                "id":7,
+                "ArtistName":"S.P.B",
+                "ArtistInfo":"https://www.last.fm/music/S.P.B/+albums",
+                "songName":"Andamina Premarani",
+                "imageUrl":"https://c.saavncdn.com/204/Premikudu-Telugu-1994-20180713-500x500.jpg",
+                "songUrl":"https://open.spotify.com/track/4eEr2PZB3WJp74qkxzQrLS",
+                "Playlist":"https://open.spotify.com/search/spb"
+        },
+        {
+            "id":8,
+            "ArtistName":"K.S Chithra",
+            "ArtistInfo":"https://www.last.fm/music/K+S+Chithra/+albums",
+            "songName":"Cheppamma",
+            "imageUrl":"https://i.scdn.co/image/ab67616d0000b273c6f68fb0be1cea74af400f4e",
+            "songUrl":"https://open.spotify.com/search/cheppamma",
+            "Playlist":"https://open.spotify.com/artist/2IUtwMti1OiT3lkW6RubgH"
+
+        },
+        {
+            "id":9,
+            "ArtistName":"Thaman",
+            "ArtistInfo":"https://www.last.fm/music/Thaman+S/+albums",
+            "songName":"Kurchi MadathaPetti ",
+            "imageUrl":"https://i.scdn.co/image/ab67616d0000b2731b291d0933bd9890c1b354b7",
+            "songUrl":"https://open.spotify.com/track/0hY9eA74QrMCJuWEx7fo9y",
+            "Playlist":"https://open.spotify.com/search/thaman"
+        },
+        {
+            "id":10,
+            "ArtistName":"Pritam",
+            "ArtistInfo":"",
+            "songName":"Kesariya",
+            "imageUrl":"https://c.saavncdn.com/493/Kesariya-Audio-Teaser-From-Brahmastra--Hindi-2022-20220414173718-500x500.jpg",
+            "songUrl":"https://open.spotify.com/track/4UMIv5jd9gK98a39BQRD9X",
+            "Playlist":"https://open.spotify.com/artist/1wRPtKGflJrBx9BmLsSwlU"
+        }
+
+       
+    ]
+
+}

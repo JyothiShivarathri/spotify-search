@@ -1,0 +1,103 @@
+#results img{
+    height:300px;
+    width:250px;
+    margin-left:200px;
+    margin-top:40px;
+}
+
+body{
+    background-image: url("./background.jpg");
+    background-size: cover;
+} 
+#searchInput{
+    margin-right: 80px;
+    width:500px
+}
+#logo{
+    margin-left:-80px;
+}
+#logo1{
+    font-size:xx-large;
+    font-weight: bold;
+}
+#results {
+    margin-left:-180px;
+}
+#para{
+    position: relative;
+    left: 200px;
+    font-size:large;
+    font-style: italic;
+    top:10px
+
+}
+#para1{
+    position: relative;
+    left: 200px;
+    font-size: large;
+    font-style: italic;
+    top:10px
+}
+#songname{
+    position: relative;
+    left:200px;
+    color:white;
+    top:-5px;
+  
+    font-size: x-large;
+    font-style: italic;
+   
+}
+#ArtistName{
+    position: relative;
+    left:200px;
+    color:white;
+    top:-5px;
+     
+    font-size: x-large;
+    font-style: italic;
+    
+}
+
+.img-circle{
+    height:80px;
+    width: 80px;
+    border-radius: 50%;
+}
+ 
+  .sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+ /* Gap between grid items */
+  grid-column-gap: 0px; /* Gap between rows */
+  background-color: black;
+  width: 300px;
+  padding: 20px;
+  }
+  
+  .container {
+    width: 100%; /* Ensure each container takes full width of its grid cell */
+  }
+  .container h6{
+    color: white; /* Ensure each container takes full width of its grid cell */
+  }
+  .artistsearch{
+    color:white;
+    font-weight: bold;
+    position: relative;
+    left:20px;
+    top:5px;
+    background-color: black;
+   
+  }
+  
+  .big-container{
+    display: flex;
+   position: relative;
+    top:-10px
+  }
+  .row {
+    flex: 1;
+    padding: 20px;
+  }
+  
